@@ -1,0 +1,145 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/portal.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/coinw.png" type="Texture" id=7]
+[ext_resource path="res://assets/enemy.png" type="Texture" id=8]
+[ext_resource path="res://assets/keys.png" type="Texture" id=9]
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.307
+margin_top = -554.216
+margin_right = 71.6929
+margin_bottom = -384.216
+rect_scale = Vector2( 2, 2 )
+text = "Bit"
+
+[node name="Coin" type="TextureRect" parent="."]
+margin_left = 504.249
+margin_top = 509.594
+margin_right = 571.249
+margin_bottom = 576.594
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinPoints" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -504.67
+margin_top = -60.6576
+margin_right = 9.32996
+margin_bottom = 109.342
+text = "1 point"
+
+[node name="Enemy" type="TextureRect" parent="."]
+margin_left = 1138.57
+margin_top = 514.939
+margin_right = 1246.57
+margin_bottom = 607.939
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyPoints" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 145.686
+margin_top = -60.6576
+margin_right = 659.686
+margin_bottom = 109.342
+text = "2 points"
+
+[node name="Keys" type="TextureRect" parent="."]
+margin_left = 571.957
+margin_top = 241.034
+margin_right = 1211.96
+margin_bottom = 680.034
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToMove" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.1484
+margin_top = -265.565
+margin_right = 558.852
+margin_bottom = -95.5643
+text = "To move, space to jump"
+
+[node name="ToMove2" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -809.357
+margin_top = 119.304
+margin_right = 826.643
+margin_bottom = 289.304
+text = "Collect enough coins to unlock the portal before the time runs out"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.182
+margin_top = 327.686
+margin_right = 197.818
+margin_bottom = 481.686
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 4 )]
+margin_right = 360.0
+margin_bottom = 73.0
+text = "Play"
+next_scene_path = "res://src/Levels/Level01.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 5 )]
+margin_top = 81.0
+margin_right = 360.0
+margin_bottom = 154.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true

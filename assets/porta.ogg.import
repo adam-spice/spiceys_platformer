@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/porta.ogg-2ae4ec696c9755cca9e9b67393f3f245.oggstr"
+
+[deps]
+
+source_file="res://assets/porta.ogg"
+dest_files=[ "res://.import/porta.ogg-2ae4ec696c9755cca9e9b67393f3f245.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

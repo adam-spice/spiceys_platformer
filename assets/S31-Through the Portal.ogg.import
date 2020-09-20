@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/S31-Through the Portal.ogg-afebde5a9d1ee96f38ccf50571a9ebd5.oggstr"
+
+[deps]
+
+source_file="res://assets/S31-Through the Portal.ogg"
+dest_files=[ "res://.import/S31-Through the Portal.ogg-afebde5a9d1ee96f38ccf50571a9ebd5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,2 +1,3 @@
 # spiceys_platformer
-platform game created for whitecliffe diploma
+
+To run the game run the executable in the build forder.
